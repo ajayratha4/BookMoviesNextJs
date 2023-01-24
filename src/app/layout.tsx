@@ -16,9 +16,9 @@ export default function RootLayout({
             <Header />
           </div>
           <div className="h-[calc(100%-64px)] flex ">
-            {/* <div className=" dark:border-r w-1/6 h-full">
+            <div className="flex sm:hidden md:hidden lg:flex dark:border-r w-1/6 h-full">
               <Sidebar />
-            </div> */}
+            </div>
             <div className="h-full w-full">{children}</div>
           </div>
         </div>
