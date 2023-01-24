@@ -1,9 +1,14 @@
+import Button from "@/components/Button";
 import Link from "next/link";
 
 const Page = () => {
   return (
-    <div className="bg-primary h-full text-white">
-      <Link href={"/test"}>page</Link>
+    <div className="h-full w-full flex justify-center items-center">
+      <div>
+        <Button>
+          <Link href={"/test"}>page</Link>
+        </Button>
+      </div>
     </div>
   );
 };
