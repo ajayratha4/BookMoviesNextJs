@@ -1,5 +1,3 @@
-import { movies } from "@/const";
-import Image from "next/image";
 import { Rating } from "@/components/common/icons";
 
 const MovieCard = ({ movie }: any) => {

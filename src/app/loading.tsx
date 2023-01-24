@@ -1,5 +1,7 @@
+import MovieSkeleton from "@/components/common/movie/MovieSkeleton";
+
 const Loading = () => {
-  return <div>loading...</div>;
+  return <MovieSkeleton />;
 };
 
 export default Loading;
