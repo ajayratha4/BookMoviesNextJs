@@ -14,8 +14,6 @@ const Page = ({ params }: Props) => {
       </div>
       <div className="h-full overflow-auto flex flex-col">
         <MovieDetails movie={movie} />
-        <MovieDetails movie={movie} /> <MovieDetails movie={movie} />{" "}
-        <MovieDetails movie={movie} /> <MovieDetails movie={movie} />
       </div>
     </div>
   );
