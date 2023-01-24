@@ -11,14 +11,14 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head />
       <body>
-        <div className="dark:bg dark:text-white flex flex-col h-full">
+        <div className="dark:bg dark:text-white flex flex-col h-full ">
           <div className="h-16 dark:border-b">
             <Header />
           </div>
-          <div id="ll" className="h-full  hidden md:flex ">
-            <div className="sm:hidden md:flex dark:border-r w-1/6 h-full">
+          <div className="h-[calc(100%-64px)] flex ">
+            {/* <div className=" dark:border-r w-1/6 h-full">
               <Sidebar />
-            </div>
+            </div> */}
             <div className="h-full w-full">{children}</div>
           </div>
         </div>
