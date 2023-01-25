@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import Login from "@/components/Login";
 import Modal from "@/components/Modal";
 import { getUser } from "@/utils/user";
 import { useRouter } from "next/navigation";
@@ -35,15 +36,25 @@ const MovieDetails = ({ movie }: Props) => {
     genres,
     runtimeStr,
   } = movie;
+
+  const bookMovie = () => {
+    const user = getUser();
+
+    if (user) {
+      router.push("/account/order");
+    } else {
+      setModal(true);
+    }
+  };
   return (
     <div className="h-full w-full  ">
       <div className="w-full h-full relative flex justify-center ">
-        <div className="w-full h-full ">
+        {/* <div className="w-full h-full ">
           <img
             className="h-full w-full object-cover opacity-60 dark:opacity-20"
             src={image}
           />
-        </div>
+        </div> */}
         <div className="w-11/12 h-full absolute top-0 flex items-center gap-16 ">
           <img className="h-4/6 w-72 " src={image} />
           <div className="space-y-4">
@@ -57,27 +68,26 @@ const MovieDetails = ({ movie }: Props) => {
             <p className="text-lg">Plot: {plot}</p>
             <div>
               <div
-                onClick={() => {
-                  const a = getUser();
-                  console.log(a);
-                  debugger;
-                  if (false) {
-                    setModal(true);
-                  } else {
-                    router.push("/account/order");
-                  }
-                }}
-                className=" cursor-pointer w-60 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                onClick={bookMovie}
+                className=" cursor-pointer w-60 text-white bg-gradient-to-br from-primary to-secondary hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
-                Book Movie
+                Book Ticket
               </div>
             </div>
           </div>
         </div>
       </div>
-      <Modal open={modal} handleClose={() => setModal(false)}>
-        <div className="h-96 w-96">hhh</div>
-      </Modal>
+
+      {modal && (
+        <Login
+          open={modal}
+          handleonSubmit={(data) => {
+            document.cookie = `username=${data.username}`;
+            router.push("/account/order");
+          }}
+          handleClose={() => setModal(false)}
+        />
+      )}
     </div>
   );
 };

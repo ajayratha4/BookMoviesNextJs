@@ -19,12 +19,12 @@ const Modal = ({ open, handleClose, children }: Props) => {
       role="dialog"
       aria-modal="true"
     >
-      <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+      <div className="fixed inset-0 bg-gray-400 bg-opacity-70 transition-opacity"></div>
 
       <div className="fixed inset-0 z-10 overflow-y-auto">
         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <div
-            className="bg-white dark:bg-paper p-2 rounded"
+            className="w-full h-full flex items-center justify-center "
             onClick={(e) => e.stopPropagation()}
           >
             {children}

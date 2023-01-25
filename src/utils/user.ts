@@ -6,6 +6,5 @@ export const getUser = () => {
     const cookieArr = item.split("=");
     return { [cookieArr[0]]: cookieArr[1] };
   });
-  debugger;
-  return cookieObj?.username || "";
+  return cookieObj.find((item) => item.username)?.username || null;
 };
