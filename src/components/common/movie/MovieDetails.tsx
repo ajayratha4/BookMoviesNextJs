@@ -1,4 +1,9 @@
-import Link from "next/link";
+/* eslint-disable @next/next/no-img-element */
+"use client";
+import Modal from "@/components/Modal";
+import { getUser } from "@/utils/user";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 interface Props {
   movie: {
@@ -16,6 +21,8 @@ interface Props {
 }
 
 const MovieDetails = ({ movie }: Props) => {
+  const router = useRouter();
+  const [modal, setModal] = useState(false);
   const {
     id,
     fullTitle,
@@ -49,16 +56,28 @@ const MovieDetails = ({ movie }: Props) => {
             <p className="text-lg">Runtime: {runtimeStr}</p>
             <p className="text-lg">Plot: {plot}</p>
             <div>
-              <Link
-                href={"/account/order"}
-                className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+              <div
+                onClick={() => {
+                  const a = getUser();
+                  console.log(a);
+                  debugger;
+                  if (false) {
+                    setModal(true);
+                  } else {
+                    router.push("/account/order");
+                  }
+                }}
+                className=" cursor-pointer w-60 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
                 Book Movie
-              </Link>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <Modal open={modal} handleClose={() => setModal(false)}>
+        <div className="h-96 w-96">hhh</div>
+      </Modal>
     </div>
   );
 };
