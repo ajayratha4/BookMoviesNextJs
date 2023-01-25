@@ -5,8 +5,6 @@ interface Props {
   params: { id: string };
 }
 const Page = ({ params }: Props) => {
-  console.log(params.id);
-
   return (
     <div className="h-full w-full flex  flex-col">
       <div className="flex">
