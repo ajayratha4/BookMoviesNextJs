@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
+const routes = ["/account", "/account/order"];
+
 // This function can be marked `async` if using `await` inside
 export function middleware(request: NextRequest) {
   let verify = request.cookies.get("username");
@@ -9,8 +11,10 @@ export function middleware(request: NextRequest) {
     if (request.nextUrl.pathname === "/login") {
       return NextResponse.rewrite(new URL("/movies", request.nextUrl));
     }
-    return NextResponse.next();
   } else {
+    if (!routes.includes(request.nextUrl.pathname)) {
+      return NextResponse.next();
+    }
     return NextResponse.rewrite(new URL("/login", request.nextUrl));
   }
 }

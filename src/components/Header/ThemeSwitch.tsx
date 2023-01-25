@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { DarkIcon, LightIcon } from "@/components/common/icons";
 
 const ThemeSwitch = () => {
-  useEffect(() => {
-    document.cookie = "username=John Doe";
-  }, []);
+  // useEffect(() => {
+  //   document.cookie = "username=John Doe";
+  // }, []);
 
   const [isDark, setIsDark] = useState(false);
 
