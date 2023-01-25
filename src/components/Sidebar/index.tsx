@@ -1,5 +1,5 @@
 const Sidebar = () => {
-  return <div className="h-full w-full bg-gray-200 dark:bg-secondary"></div>;
+  return <div className="h-full w-full  dark:bg-secondary"></div>;
 };
 
 export default Sidebar;

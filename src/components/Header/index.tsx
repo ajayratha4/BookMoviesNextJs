@@ -3,7 +3,7 @@ import ThemeSwitch from "./ThemeSwitch";
 
 const Header = () => {
   return (
-    <div className="flex justify-between h-full w-full px-2  bg-primary dark:bg-secondary">
+    <div className="flex justify-between h-full w-full px-2  dark:bg-secondary">
       <div className="h-full flex items-center gap-2">
         <Link href={"/"}>Home</Link>
         <Link href={"/movies"}>Movies</Link>

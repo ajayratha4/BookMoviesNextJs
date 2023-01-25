@@ -1,9 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { DarkIcon, LightIcon } from "@/components/common/icons";
 
 const ThemeSwitch = () => {
+  useEffect(() => {
+    document.cookie = "username=John Doe";
+  }, []);
+
   const [isDark, setIsDark] = useState(false);
 
   const toggle = () => {
@@ -17,7 +21,11 @@ const ThemeSwitch = () => {
   };
 
   return (
-    <div id="ripple" onClick={toggle} className="rounded text-white">
+    <div
+      id="ripple"
+      onClick={toggle}
+      className="rounded text-secondary dark:text-white"
+    >
       {isDark ? <LightIcon /> : <DarkIcon />}
     </div>
   );

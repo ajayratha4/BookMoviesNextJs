@@ -1,4 +1,4 @@
-import { use } from "react";
+// import { use } from "react";
 async function getData() {
   // You would usually fetch data from an API here.
   // const res = await fetch("https://api.github.com/");

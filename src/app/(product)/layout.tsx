@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
-import "./globals.css";
+import "@/app/globals.css";
 
 export default function RootLayout({
   children,
@@ -13,11 +13,11 @@ export default function RootLayout({
       <head />
       <body>
         <div className="dark:bg dark:text-white flex flex-col h-full ">
-          <div className="h-16 dark:border-b">
+          <div className="h-16 border-b border-gray-400 dark:border-border">
             <Header />
           </div>
           <div className="h-[calc(100%-64px)] flex">
-            <div className="hidden lg:flex dark:border-r w-1/6 h-full">
+            <div className="hidden lg:flex border-r  border-gray-400 dark:border-border  w-1/6 h-full">
               <Sidebar />
             </div>
             <div className="h-full w-full lg:w-[calc(100%-16%)] flex flex-col">
