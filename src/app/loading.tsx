@@ -1,4 +1,5 @@
-import MovieSkeleton from "@/components/common/movie/MovieSkeleton";
+"use client";
+import MovieSkeleton from "@/components/common/skeletons/MovieSkeleton";
 
 const Loading = () => {
   return <MovieSkeleton />;

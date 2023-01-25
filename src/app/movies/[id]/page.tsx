@@ -10,7 +10,7 @@ const Page = ({ params }: Props) => {
   return (
     <div className="h-full w-full flex  flex-col">
       <div className="flex">
-        <p className="h-14 p-2 text-3xl">Top 250 movies</p>
+        <p className="h-14 p-2 text-3xl">Movie</p>
       </div>
       <div className="h-full overflow-auto flex flex-col">
         <MovieDetails movie={movie} />

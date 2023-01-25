@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 
 const Button = ({
   children,
-  className = "bg-primary  hover:bg-blue-700 dark:text-white py-2 px-4 rounded",
+  className = "text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl    py-2 px-4 rounded",
   style,
 }: {
   children: React.ReactNode;

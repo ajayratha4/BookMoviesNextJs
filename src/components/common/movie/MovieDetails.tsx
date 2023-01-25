@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface Props {
   movie: {
     id: string;
@@ -9,6 +11,7 @@ interface Props {
     plot: string;
     directors: string;
     genres: string;
+    runtimeStr: string;
   };
 }
 
@@ -23,6 +26,7 @@ const MovieDetails = ({ movie }: Props) => {
     plot,
     directors,
     genres,
+    runtimeStr,
   } = movie;
   return (
     <div className="h-full w-full  ">
@@ -42,7 +46,16 @@ const MovieDetails = ({ movie }: Props) => {
             <p className="text-xl">Stars: {stars}</p>
             <p className="text-xl">writers: {writers}</p>
             <p className="text-xl">Directors: {directors}</p>
+            <p className="text-lg">Runtime: {runtimeStr}</p>
             <p className="text-lg">Plot: {plot}</p>
+            <div>
+              <Link
+                href={"/account/order"}
+                className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+              >
+                Book Movie
+              </Link>
+            </div>
           </div>
         </div>
       </div>
