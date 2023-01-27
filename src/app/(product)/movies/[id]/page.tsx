@@ -1,4 +1,5 @@
 import MovieDetails from "@/components/common/movie/MovieDetails";
+import { movies } from "@/const";
 import { movie } from "./const";
 
 interface Props {
@@ -18,3 +19,9 @@ const Page = ({ params }: Props) => {
 };
 
 export default Page;
+
+export async function generateStaticParams() {
+  return movies.map((movie) => ({
+    id: movie.id.toString(),
+  }));
+}
