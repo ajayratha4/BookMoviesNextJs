@@ -41,7 +41,7 @@ const MovieDetails = ({ movie }: Props) => {
     const user = getUser();
 
     if (user) {
-      router.push("/account/order");
+      router.push("/movies/555/444");
     } else {
       setModal(true);
     }
@@ -83,7 +83,7 @@ const MovieDetails = ({ movie }: Props) => {
           open={modal}
           handleonSubmit={(data) => {
             document.cookie = `username=${data.username}`;
-            router.push("/account/order");
+            router.push("/movies/555/444");
           }}
           handleClose={() => setModal(false)}
         />
