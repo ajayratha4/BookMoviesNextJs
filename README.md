@@ -1,7 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
-
+ App Url : https://book-movies-next-js-wzuo-nir2y62b8-ajayratha4.vercel.app/
 
 First, run the development server:
 
