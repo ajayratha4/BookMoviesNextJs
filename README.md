@@ -2,6 +2,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
  App Url : https://book-movies-next-js-wzuo-nir2y62b8-ajayratha4.vercel.app/
+ 
+
+
+https://user-images.githubusercontent.com/73908312/229470557-2bb6ab7f-b8dd-4092-b127-744be3804b84.mp4
+
 
 First, run the development server:
 
